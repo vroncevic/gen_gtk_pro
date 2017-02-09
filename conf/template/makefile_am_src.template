@@ -1,34 +1,34 @@
-${HASH}" @info   ${GEN_GTK_PRO_TOOL} ${GEN_GTK_PRO_VERSION}"
-${HASH}" @author ${AUTHOR_NAME} ${AUTHOR_EMAIL}"
-${HASH}" @brief  Process this file with automake to produce Makefile.in."
+${H}" @info   ${GEN_GTK_PRO_TOOL} ${GEN_GTK_PRO_VERSION}"
+${H}" @author ${AN} ${AE}"
+${H}" @brief  Process this file with automake to produce Makefile.in."
 
 "uidir = \\\$(pkgdatadir)/ui"
-"ui_DATA = ${PNAME}.ui"
+"ui_DATA = ${PN}.ui"
 
-"AM_CPPFLAGS = ${BSLASH}"
-"${TAB}-DPACKAGE_LOCALE_DIR=${BSLASH}\\\"\\\"\\\$(localedir)\\\"${BSLASH}\\\" ${BSLASH}"
-"${TAB}-DPACKAGE_SRC_DIR=${BSLASH}\\\"\\\"\\\$(srcdir)\\\"${BSLASH}\\\" ${BSLASH}"
-"${TAB}-DPACKAGE_DATA_DIR=${BSLASH}\\\"\\\"\\\$(pkgdatadir)\\\"${BSLASH}\\\" ${BSLASH}"
-"${TAB}\\\$(${UPNAME}_CFLAGS)"
+"AM_CPPFLAGS = ${BSL}"
+"${T}-DPACKAGE_LOCALE_DIR=${BSL}\\\"\\\"\\\$(localedir)\\\"${BSL}\\\" ${BSL}"
+"${T}-DPACKAGE_SRC_DIR=${BSL}\\\"\\\"\\\$(srcdir)\\\"${BSL}\\\" ${BSL}"
+"${T}-DPACKAGE_DATA_DIR=${BSL}\\\"\\\"\\\$(pkgdatadir)\\\"${BSL}\\\" ${BSL}"
+"${T}\\\$(${UPN}_CFLAGS)"
 
-"AM_CFLAGS = ${BSLASH}"
-"${TAB}-Wall ${BSLASH}"
-"${TAB}-g"
+"AM_CFLAGS = ${BSL}"
+"${T}-Wall ${BSL}"
+"${T}-g"
 
-"bin_PROGRAMS = ${PNAME}"
+"bin_PROGRAMS = ${PN}"
 
-"${PNAME}_SOURCES = ${BSLASH}"
-"${TAB}main.c"
+"${PN}_SOURCES = ${BSL}"
+"${T}main.c"
 
-"${PNAME}_LDFLAGS = ${BSLASH}"
-"${TAB}-Wl,--export-dynamic"
+"${PN}_LDFLAGS = ${BSL}"
+"${T}-Wl,--export-dynamic"
 
-"${PNAME}_LDADD = \\\$(${UPNAME}_LIBS)"
+"${PN}_LDADD = \\\$(${UPN}_LIBS)"
 
 "EXTRA_DIST = \\\$(ui_DATA)"
 
-${HASH}" Remove ui directory on uninstall"
+${H}" Remove ui directory on uninstall"
 "uninstall-local:"
-${TAB}"-rm -r \\\$(uidir)"
-${TAB}"-rm -r \\\$(pkgdatadir)"
+${T}"-rm -r \\\$(uidir)"
+${T}"-rm -r \\\$(pkgdatadir)"
 

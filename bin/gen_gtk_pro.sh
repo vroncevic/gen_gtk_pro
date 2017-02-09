@@ -67,8 +67,8 @@ TOOL_NOTIFY="false"
 # __gen_gtk_pro "rtp"
 #
 function __gen_gtk_pro() {
-	local PNAME=$1
-	if [ -n "${PNAME}" ]; then
+	local PN=$1
+	if [ -n "${PN}" ]; then
 		local FUNC=${FUNCNAME[0]} MSG="None" STATUS_CONF STATUS_CONF_UTIL STATUS
 		MSG="Loading basic and util configuration!"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_GTK_PRO_TOOL"
@@ -92,13 +92,13 @@ function __gen_gtk_pro() {
 		TOOL_LOG=${config_gen_gtk_pro[LOGGING]}
 		TOOL_DBG=${config_gen_gtk_pro[DEBUGGING]}
 		TOOL_NOTIFY=${config_gen_gtk_pro[EMAILING]}
-		local VERSION=${config_gen_gtk_pro_util[VERSION]} DATE=`date` HASH="#"
-		local AUTHOR_NAME=${config_gen_gtk_pro_util[AUTHOR_NAME]} BSLASH="\\"
-		local AUTHOR_EMAIL=${config_gen_gtk_pro_util[AUTHOR_EMAIL]} TAB="	"
-		local PROJECT_SET=${config_gen_gtk_pro_util[PROJECT_SET]} TREE
-		local FIRST_NEWS="Project created ${DATE}" RMSG="${HASH} Readme section"
-		local UPNAME=$(echo ${PNAME} | tr 'a-z' 'A-Z')
-		local ULNAME=$(echo ${PNAME} | tr 'A-Z' 'a-z')
+		local V=${config_gen_gtk_pro_util[VERSION]} DATE=`date` H="#" TREE
+		local AN=${config_gen_gtk_pro_util[AUTHOR_NAME]} T="	" BSL="\\"
+		local AE=${config_gen_gtk_pro_util[AUTHOR_EMAIL]}
+		local PROJECT_SET=${config_gen_gtk_pro_util[PROJECT_SET]}
+		local FN="Project created ${DATE}" RMSG="${H} Readme section"
+		local UPN=$(echo ${PN} | tr 'a-z' 'A-Z')
+		local LPN=$(echo ${PN} | tr 'A-Z' 'a-z')
 		declare -A project_set=()
 		__load_util_conf "${GEN_GTK_PRO_HOME}/conf/${PROJECT_SET}" project_set
 		STATUS=$?
@@ -109,15 +109,15 @@ function __gen_gtk_pro() {
 		fi
 		MSG="Generate project structure!"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_GTK_PRO_TOOL"
-		if [ -d "${PNAME}/" ]; then
-			MSG="Directory already exist [${PNAME}]"
+		if [ -d "${PN}/" ]; then
+			MSG="Directory already exist [${PN}]"
 			__info_debug_message "$MSG" "$FUNC" "$GEN_GTK_PRO_TOOL"
 			MSG="Force exit!"
 			__info_debug_message_end "$MSG" "$FUNC" "$GEN_GTK_PRO_TOOL"
 			exit 131
 		fi
 		local CDIR=`pwd`
-		local PDIR="${CDIR}/${PNAME}"
+		local PDIR="${CDIR}/${PN}"
 		MSG="Generating directory [${PDIR}/]"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_GTK_PRO_TOOL"
 		mkdir "${PDIR}/"
@@ -169,7 +169,7 @@ function __gen_gtk_pro() {
 		do
 			eval echo "${SCL}" >> ${SCF}
 		done < ${SCTF}
-		local UIT=${project_set[UI]} UIF="${SRC}/${PNAME}.ui"
+		local UIT=${project_set[UI]} UIF="${SRC}/${PN}.ui"
 		local UITF=$(cat "${GEN_GTK_PRO_HOME}/conf/${UIT}")
 		MSG="Generating file [${UIF}]"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_GTK_PRO_TOOL"
@@ -204,7 +204,7 @@ function __gen_gtk_pro() {
 			eval echo "${AUL}" >> ${AUF}
 		done < ${AUTF}
 		local NT=${project_set[NEWS]} NF="${PDIR}/NEWS" NL
-		local FIRST_NEWS="Project created ${DATE}"
+		local FN="Project created ${DATE}"
 		local NTF="${GEN_GTK_PRO_HOME}/conf/${NT}"
 		MSG="Generating file [${NF}]"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_GTK_PRO_TOOL"

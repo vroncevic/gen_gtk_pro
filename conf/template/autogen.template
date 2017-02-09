@@ -108,7 +108,9 @@ case ${CC} in
 		;;
 esac
 
-for coin in `find ${srcdir} -path ${srcdir}/CVS -prune -o -name configure.ac -print`
+COINS=`find ${srcdir} -path ${srcdir}/CVS -prune -o -name configure.ac -print`
+
+for coin in ${COINS}
 do
 	dr=`dirname ${coin}`
 	if test -f ${dr}/NO-AUTO-GEN; then
