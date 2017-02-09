@@ -1,0 +1,34 @@
+${HASH}" @info   ${GEN_GTK_PRO_TOOL} ${GEN_GTK_PRO_VERSION}"
+${HASH}" @author ${AUTHOR_NAME} ${AUTHOR_EMAIL}"
+${HASH}" @brief  Process this file with automake to produce Makefile.in."
+
+"uidir = \\\$(pkgdatadir)/ui"
+"ui_DATA = ${PNAME}.ui"
+
+"AM_CPPFLAGS = ${BSLASH}"
+"${TAB}-DPACKAGE_LOCALE_DIR=${BSLASH}\\\"\\\"\\\$(localedir)\\\"${BSLASH}\\\" ${BSLASH}"
+"${TAB}-DPACKAGE_SRC_DIR=${BSLASH}\\\"\\\"\\\$(srcdir)\\\"${BSLASH}\\\" ${BSLASH}"
+"${TAB}-DPACKAGE_DATA_DIR=${BSLASH}\\\"\\\"\\\$(pkgdatadir)\\\"${BSLASH}\\\" ${BSLASH}"
+"${TAB}\\\$(${UPNAME}_CFLAGS)"
+
+"AM_CFLAGS = ${BSLASH}"
+"${TAB}-Wall ${BSLASH}"
+"${TAB}-g"
+
+"bin_PROGRAMS = ${PNAME}"
+
+"${PNAME}_SOURCES = ${BSLASH}"
+"${TAB}main.c"
+
+"${PNAME}_LDFLAGS = ${BSLASH}"
+"${TAB}-Wl,--export-dynamic"
+
+"${PNAME}_LDADD = \\\$(${UPNAME}_LIBS)"
+
+"EXTRA_DIST = \\\$(ui_DATA)"
+
+${HASH}" Remove ui directory on uninstall"
+"uninstall-local:"
+${TAB}"-rm -r \\\$(uidir)"
+${TAB}"-rm -r \\\$(pkgdatadir)"
+

@@ -1,0 +1,30 @@
+${HASH}" @info   ${GEN_GTK_PRO_TOOL} ${GEN_GTK_PRO_VERSION}"
+${HASH}" @author ${AUTHOR_NAME} ${AUTHOR_EMAIL}"
+${HASH}" @brief  Process this file with automake to produce Makefile.in."
+
+"SUBDIRS = src po"
+
+"dist_doc_DATA = ${BSLASH}"
+"${TAB}README ${BSLASH}"
+"${TAB}COPYING ${BSLASH}"
+"${TAB}AUTHORS ${BSLASH}"
+"${TAB}ChangeLog ${BSLASH}"
+"${TAB}INSTALL ${BSLASH}"
+"${TAB}NEWS"
+
+"INTLTOOL_FILES = intltool-extract.in ${BSLASH}"
+"${TAB}intltool-merge.in ${BSLASH}"
+"${TAB}intltool-update.in"
+
+"EXTRA_DIST = ${BSLASH}"
+"${TAB}\\\$(INTLTOOL_FILES)"
+
+"DISTCLEANFILES = intltool-extract ${BSLASH}"
+"${TAB}intltool-merge ${BSLASH}"
+"${TAB}intltool-update ${BSLASH}"
+"${TAB}po/.intltool-merge-cache"
+
+${HASH}" Remove doc directory on uninstall"
+"uninstall-local:"
+${TAB}"-rm -r \\\$(docdir)"
+
