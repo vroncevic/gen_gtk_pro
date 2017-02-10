@@ -169,6 +169,12 @@ function __gen_gtk_pro() {
 		do
 			eval echo "${SCL}" >> ${SCF}
 		done < ${SCTF}
+		local CET=${project_set[C_EDIT]}
+		local CETF=$(cat "${GEN_GTK_PRO_HOME}/conf/${CET}")
+		local CEF="${SRC}/.editorconfig"
+		MSG="Generating file [${CEF}]"
+		__info_debug_message "$MSG" "$FUNC" "$GEN_GTK_PRO_TOOL"
+		echo -e "${CETF}" > "${CEF}"
 		local UIT=${project_set[UI]} UIF="${SRC}/${PN}.ui"
 		local UITF=$(cat "${GEN_GTK_PRO_HOME}/conf/${UIT}")
 		MSG="Generating file [${UIF}]"
@@ -213,7 +219,7 @@ function __gen_gtk_pro() {
 			eval echo "${NL}" >> ${NF}
 		done < ${NTF}
 		local RT=${project_set[README]} RF="${PDIR}/README" RL
-		local RMSG="${HASH} Readme section" RTF="${GEN_GTK_PRO_HOME}/conf/${RT}"
+		local RMSG="${H} Readme section" RTF="${GEN_GTK_PRO_HOME}/conf/${RT}"
 		MSG="Generating file [${RF}]"
 		__info_debug_message "$MSG" "$FUNC" "$GEN_GTK_PRO_TOOL"
 		while read RL
