@@ -1,5 +1,5 @@
 ${H}" @info   ${GEN_GTK_PRO_TOOL} ${GEN_GTK_PRO_VERSION}"
-${H}" @author ${AN} ${AE}"
+${H}" @author ${AN} <${AE}>"
 ${H}" @brief  Process this file with automake to produce Makefile.in."
 
 "SUBDIRS = src po"
