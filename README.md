@@ -1,8 +1,8 @@
 # Generate GTK C Project.
 
-***gen_gtk_pro*** is shell tool for generating GTK C project.
+**gen_gtk_pro** is shell tool for generating GTK C project.
 
-Developed in bash code: ***100%***.
+Developed in [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) code: **100%**.
 
 The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
@@ -14,19 +14,19 @@ other information that should be provided before the modules are installed.
 <!-- START doctoc -->
 **Table of Contents**
 
-- [Installation](https://github.com/vroncevic/gen_gtk_pro#installation)
-- [Usage](https://github.com/vroncevic/gen_gtk_pro#usage)
-- [Dependencies](https://github.com/vroncevic/gen_gtk_pro#dependencies)
-- [Shell tool structure](https://github.com/vroncevic/gen_gtk_pro#shell-tool-structure)
-- [Docs](https://github.com/vroncevic/gen_gtk_pro#docs)
-- [Copyright and Licence](https://github.com/vroncevic/gen_gtk_pro#copyright-and-licence)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Shell tool structure](#shell-tool-structure)
+- [Docs](#docs)
+- [Copyright and Licence](#copyright-and-licence)
 <!-- END doctoc -->
 
 ### INSTALLATION
 
 Navigate to release [page](https://github.com/vroncevic/gen_gtk_pro/releases) download and extract release archive.
 
-To install modules type the following:
+To install **gen_gtk_pro** type the following:
 
 ```
 tar xvzf gen_gtk_pro-x.y.z.tar.gz
@@ -55,15 +55,14 @@ gen_gtk_pro SimpleTest
 
 ### DEPENDENCIES
 
-This module requires these other modules and libraries:
-
-* sh_util https://github.com/vroncevic/sh_util
+**gen_gtk_pro** requires next modules and libraries:
+* sh_util [https://github.com/vroncevic/sh_util](https://github.com/vroncevic/sh_util)
 
 ### SHELL TOOL STRUCTURE
 
-***gen_gtk_pro*** is based on MOP.
+**gen_gtk_pro** is based on MOP.
 
-Shell tool structure:
+Code structure:
 ```
 .
 ├── bin/
@@ -94,14 +93,15 @@ Shell tool structure:
 [![Documentation Status](https://readthedocs.org/projects/gen_gtk_pro/badge/?version=latest)](https://gen_gtk_pro.readthedocs.io/projects/gen_gtk_pro/en/latest/?badge=latest)
 
 More documentation and info at:
-
-* https://gen_gtk_pro.readthedocs.io/en/latest/
+* [https://apmodule.readthedocs.io/en/latest/](https://apmodule.readthedocs.io/en/latest/)
+* [https://www.gnu.org/software/bash/manual/](https://www.gnu.org/software/bash/manual/)
+* [https://developer.gnome.org/gtk3](https://developer.gnome.org/gtk3/stable/gtk-getting-started.html)
 
 ### COPYRIGHT AND LICENCE
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Copyright (C) 2018 by https://vroncevic.github.io/gen_gtk_pro
+Copyright (C) 2016 by [vroncevic.github.io/gen_gtk_pro](https://vroncevic.github.io/gen_gtk_pro)
 
 This tool is free software; you can redistribute it and/or modify
 it under the same terms as Bash itself, either Bash version 4.2.47 or,
