@@ -1,8 +1,8 @@
-# Generate GTK C Project.
+# Generate GTK C Project
 
 **gen_gtk_pro** is shell tool for generating GTK C project.
 
-Developed in [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) code: **100%**.
+Developed in **[bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell))** code: **100%**.
 
 The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
