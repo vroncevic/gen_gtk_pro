@@ -1,4 +1,4 @@
-name: gen_gtk_app docker checker
+name: gen_gtk_pro docker checker
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
       id: docker_checker
       run: |
         echo Building Docker image
-        build_transcript=$(docker build . --file Dockerfile --tag gen_gtk_app:latest)
+        build_transcript=$(docker build . --file Dockerfile --tag gen_gtk_pro:latest)
         [[ "$build_transcript" == *"Successfully"* ]] && echo ::set-output name=status::success || echo ::set-output name=status::failure
     - name: Check on failures
       if: steps.docker_checker.outputs.status == 'failure'
