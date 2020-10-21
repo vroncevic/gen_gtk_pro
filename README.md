@@ -27,7 +27,7 @@ other information that should be provided before the modules are installed.
 
 ### Installation
 
-Navigate to release [page](https://github.com/vroncevic/gen_gtk_pro/releases) download and extract release archive.
+Navigate to release **[page](https://github.com/vroncevic/gen_gtk_pro/releases)** download and extract release archive.
 
 To install **gen_gtk_pro** type the following:
 
@@ -112,3 +112,8 @@ Copyright (C) 2016 by [vroncevic.github.io/gen_gtk_pro](https://vroncevic.github
 it under the same terms as Bash itself, either Bash version 4.2.47 or,
 at your option, any later version of Bash 4 you may have available.
 
+Lets help and support FSF.
+
+[![Free Software Foundation](https://raw.githubusercontent.com/vroncevic/gen_gtk_pro/dev/docs/fsf-logo_1.png)](https://my.fsf.org/)
+
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://my.fsf.org/donate/)
