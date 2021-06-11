@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # @brief   Generate GTK project
-# @version ver.1.0.0
+# @version ver.1.0
 # @date    Thu Feb 07 00:46:32 2016
 # @company None, free software to use 2016
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
@@ -227,8 +227,8 @@ function __gen_gtk_pro {
         do
             eval echo "${RL}" >> ${RF}
         done < ${RTF}
-        local USRID=${config_gen_gtk_pro_util[UID]}
-        local GRPID=${config_gen_gtk_pro_util[GID]}
+        local USRID=${config_gen_gtk_pro_util[USERID]}
+        local GRPID=${config_gen_gtk_pro_util[GROUPID]}
         eval "chown -R ${USRID}.${GRPID} ${PDIR}/"
         MSG="Set permission!"
         info_debug_message "$MSG" "$FUNC" "$GEN_GTK_PRO_TOOL"
