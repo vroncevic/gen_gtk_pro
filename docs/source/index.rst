@@ -33,11 +33,16 @@ other information that should be provided before the tool is installed.
 Installation
 -------------
 
+|Debian Linux OS|
+
+.. |Debian Linux OS| image:: https://raw.githubusercontent.com/vroncevic/gen_gtk_pro/dev/docs/debtux.png
+   :target: https://www.debian.org
+
 Navigate to release `page`_ download and extract release archive.
 
 .. _page: https://github.com/vroncevic/gen_gtk_pro/releases
 
-To install **gen_gtk_pro** type the following:
+To install **gen_gtk_pro** type the following
 
 .. code-block:: bash
 
@@ -57,7 +62,7 @@ Or You can use Docker to create image/container.
 Dependencies
 -------------
 
-**gen_gtk_pro** requires next modules and libraries:
+**gen_gtk_pro** requires next modules and libraries
 
 * sh_util `https://github.com/vroncevic/sh_util <https://github.com/vroncevic/sh_util>`_
 
@@ -66,15 +71,18 @@ Shell tool structure
 
 **gen_gtk_pro** is based on MOP.
 
-Code structure:
+Shell tool structure
 
 .. code-block:: bash
 
    sh_tool/
    ├── bin/
+   │   ├── center.sh
+   │   ├── display_logo.sh
    │   └── gen_gtk_pro.sh
    ├── conf/
    │   ├── gen_gtk_pro.cfg
+   │   ├── gen_gtk_pro.logo
    │   ├── gen_gtk_pro_util.cfg
    │   ├── project_set.cfg
    │   └── template/

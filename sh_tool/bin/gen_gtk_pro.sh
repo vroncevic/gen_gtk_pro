@@ -1,9 +1,9 @@
 #!/bin/bash
 #
 # @brief   Generate GTK project
-# @version ver.1.0
-# @date    Thu Feb 07 00:46:32 2016
-# @company None, free software to use 2016
+# @version ver.2.0
+# @date    Sun 05 Dec 2021 05:52:22 PM CET
+# @company None, free software to use 2021
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
 #
 UTIL_ROOT=/root/scripts
@@ -21,11 +21,18 @@ UTIL_LOG=${UTIL}/log
 .    ${UTIL}/bin/progress_bar.sh
 
 GEN_GTK_PRO_TOOL=gen_gtk_pro
-GEN_GTK_PRO_VERSION=ver.1.0
+GEN_GTK_PRO_VERSION=ver.2.0
 GEN_GTK_PRO_HOME=${UTIL_ROOT}/${GEN_GTK_PRO_TOOL}/${GEN_GTK_PRO_VERSION}
 GEN_GTK_PRO_CFG=${GEN_GTK_PRO_HOME}/conf/${GEN_GTK_PRO_TOOL}.cfg
 GEN_GTK_PRO_UTIL_CFG=${GEN_GTK_PRO_HOME}/conf/${GEN_GTK_PRO_TOOL}_util.cfg
+GEN_GTK_PRO_LOGO=${GEN_GTK_PRO_HOME}/conf/${GEN_GTK_PRO_TOOL}.logo
 GEN_GTK_PRO_LOG=${GEN_GTK_PRO_HOME}/log
+
+tabs 4
+CONSOLE_WIDTH=$(stty size | awk '{print $2}')
+
+.    ${GEN_GTK_PRO_HOME}/bin/center.sh
+.    ${GEN_GTK_PRO_HOME}/bin/display_logo.sh
 
 declare -A GEN_GTK_PRO_USAGE=(
     [USAGE_TOOL]="${GEN_GTK_PRO_TOOL}"
@@ -68,6 +75,7 @@ TOOL_NOTIFY="false"
 #
 function __gen_gtk_pro {
     local PN=$1
+    display_logo
     if [ -n "${PN}" ]; then
         local FUNC=${FUNCNAME[0]} MSG="None"
         local STATUS_CONF STATUS_CONF_UTIL STATUS
@@ -94,8 +102,8 @@ function __gen_gtk_pro {
         TOOL_DBG=${config_gen_gtk_pro[DEBUGGING]}
         TOOL_NOTIFY=${config_gen_gtk_pro[EMAILING]}
         local V=${config_gen_gtk_pro_util[VERSION]} DATE=`date` H="#" TREE
-        local AN=${config_gen_gtk_pro_util[AUTHOR_NAME]} T="    " BSL="\\"
-        local AE=${config_gen_gtk_pro_util[AUTHOR_EMAIL]}
+        local AN=${config_gen_gtk_pro_util[AUTHOR_NAME]} T="$(printf '\011')"
+        local AE=${config_gen_gtk_pro_util[AUTHOR_EMAIL]} BSL="\\"
         local PROJECT_SET=${config_gen_gtk_pro_util[PROJECT_SET]}
         local FN="Project created ${DATE}" RMSG="${H} Readme section"
         local UPN=$(echo ${PN} | tr 'a-z' 'A-Z')
@@ -269,4 +277,3 @@ if [ $STATUS -eq $SUCCESS ]; then
 fi
 
 exit 127
-
