@@ -29,9 +29,11 @@ other information that should be provided before the modules are installed.
 
 ### Installation
 
+![Debian Linux OS](https://raw.githubusercontent.com/vroncevic/gen_gtk_pro/dev/docs/debtux.png)
+
 Navigate to release **[page](https://github.com/vroncevic/gen_gtk_pro/releases)** download and extract release archive.
 
-To install **gen_gtk_pro** type the following:
+To install **gen_gtk_pro** type the following
 
 ```
 tar xvzf gen_gtk_pro-x.y.tar.gz
@@ -41,7 +43,47 @@ cp -R ~/sh_tool/conf/  /root/scripts/gen_gtk_pro/ver.x.y/
 cp -R ~/sh_tool/log/   /root/scripts/gen_gtk_pro/ver.x.y/
 ```
 
-![alt tag](https://raw.githubusercontent.com/vroncevic/gen_gtk_pro/dev/docs/setup_tree.png)
+Self generated setup script and execution
+```
+./gen_gtk_pro_setup.sh 
+
+[setup] installing App/Tool/Script gen_gtk_pro
+	Sun 05 Dec 2021 05:57:06 PM CET
+[setup] copy App/Tool/Script structure
+[setup] remove github editor configuration files
+[setup] set App/Tool/Script permission
+[setup] create symbolic link of App/Tool/Script
+[setup] done
+
+/root/scripts/gen_gtk_pro/ver.2.0/
+├── bin/
+│   ├── center.sh
+│   ├── display_logo.sh
+│   └── gen_gtk_pro.sh
+├── conf/
+│   ├── gen_gtk_pro.cfg
+│   ├── gen_gtk_pro.logo
+│   ├── gen_gtk_pro_util.cfg
+│   ├── project_set.cfg
+│   └── template/
+│       ├── authors.template
+│       ├── autogen.template
+│       ├── c_editorconfig.template
+│       ├── changelog.template
+│       ├── configure_ac.template
+│       ├── copying.template
+│       ├── c_source.template
+│       ├── makefile_am_root.template
+│       ├── makefile_am_src.template
+│       ├── news.template
+│       ├── readme.template
+│       └── ui.template
+└── log/
+    └── gen_gtk_pro.log
+
+4 directories, 20 files
+lrwxrwxrwx 1 root root 52 Dec  5 17:57 /root/bin/gen_gtk_pro -> /root/scripts/gen_gtk_pro/ver.2.0/bin/gen_gtk_pro.sh
+```
 
 Or You can use docker to create image/container.
 
@@ -57,25 +99,116 @@ ln -s /root/scripts/gen_gtk_pro/ver.x.y/bin/gen_gtk_pro.sh /root/bin/gen_gtk_pro
 export PATH=${PATH}:/root/bin/
 
 # Generating GTK C project
-gen_gtk_pro SimpleTest
+gen_gtk_pro rcp
+
+gen_gtk_pro ver.2.0
+Sun 05 Dec 2021 05:58:55 PM CET
+
+[check_root] Check permission for current session? [ok]
+[check_root] Done
+
+	                                                     
+	                          _   _                      
+	  __ _  ___ _ __     __ _| |_| | __  _ __  _ __ ___  
+	 / _` |/ _ \ '_ \   / _` | __| |/ / | '_ \| '__/ _ \ 
+	| (_| |  __/ | | | | (_| | |_|   <  | |_) | | | (_) |
+	 \__, |\___|_| |_|  \__, |\__|_|\_\ | .__/|_|  \___/ 
+	 |___/              |___/           |_|              
+	                                                     
+		Info   github.io/gen_gtk_pro ver.2.0 
+		Issue  github.io/issue
+		Author vroncevic.github.io
+
+[gen_gtk_pro] Loading basic and util configuration!
+100% [================================================]
+
+[load_conf] Loading App/Tool/Script configuration!
+[check_cfg] Checking configuration file [/root/scripts/gen_gtk_pro/ver.2.0/conf/gen_gtk_pro.cfg] [ok]
+[check_cfg] Done
+
+[load_conf] Done
+
+[load_util_conf] Load module configuration!
+[check_cfg] Checking configuration file [/root/scripts/gen_gtk_pro/ver.2.0/conf/gen_gtk_pro_util.cfg] [ok]
+[check_cfg] Done
+
+[load_util_conf] Done
+
+[load_util_conf] Load module configuration!
+[check_cfg] Checking configuration file [/root/scripts/gen_gtk_pro/ver.2.0/conf/project_set.cfg] [ok]
+[check_cfg] Done
+
+[load_util_conf] Done
+
+[gen_gtk_pro] Generate project structure!
+[gen_gtk_pro] Generating directory [/data/dev/bash/3_tools/gen_gtk_pro/rcp/]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/autogen.sh]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/configure.ac]
+[gen_gtk_pro] Generating directory [/data/dev/bash/3_tools/gen_gtk_pro/rcp/po/]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/po/ChangeLog]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/po/LINGUAS]
+[gen_gtk_pro] Generate file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/po/POTFILES.in]
+[gen_gtk_pro] Generating directory [/data/dev/bash/3_tools/gen_gtk_pro/rcp/src/]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/src/main.c]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/src/.editorconfig]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/src/rcp.ui]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/src/Makefile.am]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/Makefile.am]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/COPYING]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/AUTHORS]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/NEWS]
+[gen_gtk_pro] Generating file [/data/dev/bash/3_tools/gen_gtk_pro/rcp/README]
+[gen_gtk_pro] Set permission!
+[gen_gtk_pro] Set permission!
+[logging] Checking directory [/root/scripts/gen_gtk_pro/ver.2.0/log/]? [ok]
+[logging] Write info log!
+[logging] Done
+
+[gen_gtk_pro] Done
+
+[check_tool] Checking tool [/usr/bin/tree]? [ok]
+[check_tool] Done
+
+/data/dev/bash/3_tools/gen_gtk_pro/rcp/
+├── AUTHORS
+├── autogen.sh
+├── ChangeLog
+├── configure.ac
+├── COPYING
+├── Makefile.am
+├── NEWS
+├── po
+│   ├── ChangeLog
+│   ├── LINGUAS
+│   └── POTFILES.in
+├── README
+└── src
+    ├── main.c
+    ├── Makefile.am
+    └── rcp.ui
+
+2 directories, 14 files
 ```
 
 ### Dependencies
 
-**gen_gtk_pro** requires next modules and libraries:
+**gen_gtk_pro** requires next modules and libraries
 * sh_util [https://github.com/vroncevic/sh_util](https://github.com/vroncevic/sh_util)
 
 ### Shell tool structure
 
 **gen_gtk_pro** is based on MOP.
 
-Code structure:
+Shell tool structure
 ```
 sh_tool/
 ├── bin/
+│   ├── center.sh
+│   ├── display_logo.sh
 │   └── gen_gtk_pro.sh
 ├── conf/
 │   ├── gen_gtk_pro.cfg
+│   ├── gen_gtk_pro.logo
 │   ├── gen_gtk_pro_util.cfg
 │   ├── project_set.cfg
 │   └── template/
@@ -99,7 +232,7 @@ sh_tool/
 
 [![Documentation Status](https://readthedocs.org/projects/gen_gtk_pro/badge/?version=latest)](https://gen_gtk_pro.readthedocs.io/projects/gen_gtk_pro/en/latest/?badge=latest)
 
-More documentation and info at:
+More documentation and info at
 * [https://gen_gtk_pro.readthedocs.io/en/latest/](https://gen_gtk_pro.readthedocs.io/en/latest/)
 * [https://www.gnu.org/software/bash/manual/](https://www.gnu.org/software/bash/manual/)
 * [https://developer.gnome.org/gtk3](https://developer.gnome.org/gtk3/stable/gtk-getting-started.html)
