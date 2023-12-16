@@ -7,8 +7,8 @@ Developed in `bash <https://en.wikipedia.org/wiki/Bash_(Unix_shell)>`_ code: **1
 
 |GitHub shell checker|
 
-.. |GitHub shell checker| image:: https://github.com/vroncevic/gen_gtk_pro/workflows/gen_gtk_pro%20shell%20checker/badge.svg
-   :target: https://github.com/vroncevic/gen_gtk_pro/actions?query=workflow%3A%22gen_gtk_pro+shell+checker%22
+.. |GitHub shell checker| image:: https://github.com/vroncevic/gen_gtk_pro/actions/workflows/gen_gtk_pro_shell_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/gen_gtk_pro/actions/workflows/gen_gtk_pro_shell_checker.yml
 
 The README is used to introduce the tool and provide instructions on
 how to install the tool, any machine dependencies it may have and any
@@ -22,8 +22,8 @@ other information that should be provided before the tool is installed.
 .. |GitHub contributors| image:: https://img.shields.io/github/contributors/vroncevic/gen_gtk_pro.svg
    :target: https://github.com/vroncevic/gen_gtk_pro/graphs/contributors
 
-.. |Documentation Status| image:: https://readthedocs.org/projects/gen_gtk_pro/badge/?version=latest
-   :target: https://gen_gtk_pro.readthedocs.io/projects/gen_gtk_pro/en/latest/?badge=latest
+.. |Documentation Status| image:: https://readthedocs.org/projects/gen-gtk-pro/badge/?version=latest
+   :target: https://gen-gtk-pro.readthedocs.io/projects/gen_gtk_pro/en/latest/?badge=latest
 
 .. toctree::
     :hidden:
@@ -53,11 +53,6 @@ To install **gen_gtk_pro** type the following
    cp -R ~/sh_tool/log/   /root/scripts/gen_gtk_pro/ver.x.y/
 
 Or You can use Docker to create image/container.
-
-|GitHub docker checker|
-
-.. |GitHub docker checker| image:: https://github.com/vroncevic/gen_gtk_pro/workflows/gen_gtk_pro%20docker%20checker/badge.svg
-   :target: https://github.com/vroncevic/gen_gtk_pro/actions?query=workflow%3A%22gen_gtk_pro+docker+checker%22
 
 Dependencies
 -------------
@@ -112,7 +107,7 @@ Copyright and licence
 .. |License: Apache 2.0| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
    :target: https://opensource.org/licenses/Apache-2.0
 
-Copyright (C) 2017 by `vroncevic.github.io/gen_gtk_pro <https://vroncevic.github.io/gen_gtk_pro>`_
+Copyright (C) 2017 - 2024 by `vroncevic.github.io/gen_gtk_pro <https://vroncevic.github.io/gen_gtk_pro>`_
 
 **gen_gtk_pro** is free software; you can redistribute it and/or modify it
 under the same terms as Bash itself, either Bash version 4.2.47 or,
