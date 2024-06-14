@@ -1,6 +1,6 @@
-<img align="right" src="https://raw.githubusercontent.com/vroncevic/gen_gtk_pro/dev/docs/gen_gtk_pro_logo.png" width="25%">
-
 # Generate GTK C Project
+
+<img align="right" src="https://raw.githubusercontent.com/vroncevic/gen_gtk_pro/dev/docs/gen_gtk_pro_logo.png" width="25%">
 
 **gen_gtk_pro** is shell tool for generating GTK C project.
 
@@ -35,7 +35,7 @@ Navigate to release **[page](https://github.com/vroncevic/gen_gtk_pro/releases)*
 
 To install **gen_gtk_pro** type the following
 
-```
+```bash
 tar xvzf gen_gtk_pro-x.y.tar.gz
 cd gen_gtk_pro-x.y
 cp -R ~/sh_tool/bin/   /root/scripts/gen_gtk_pro/ver.x.y/
@@ -44,7 +44,8 @@ cp -R ~/sh_tool/log/   /root/scripts/gen_gtk_pro/ver.x.y/
 ```
 
 Self generated setup script and execution
-```
+
+```bash
 ./gen_gtk_pro_setup.sh 
 
 [setup] installing App/Tool/Script gen_gtk_pro
@@ -89,7 +90,7 @@ Or You can use docker to create image/container.
 
 ### Usage
 
-```
+```bash
 # Create symlink for shell tool
 ln -s /root/scripts/gen_gtk_pro/ver.x.y/bin/gen_gtk_pro.sh /root/bin/gen_gtk_pro
 
@@ -202,7 +203,8 @@ Sun 05 Dec 2021 05:58:55 PM CET
 **gen_gtk_pro** is based on MOP.
 
 Shell tool structure
-```
+
+```bash
 sh_tool/
 ├── bin/
 │   ├── center.sh
