@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # @brief   Generate GTK project
-# @version ver.2.0
+# @version ver.3.0
 # @date    Sun 05 Dec 2021 05:52:22 PM CET
 # @company None, free software to use 2021
 # @author  Vladimir Roncevic <elektron.ronca@gmail.com>
@@ -19,20 +19,15 @@ UTIL_LOG=${UTIL}/log
 .    ${UTIL}/bin/load_conf.sh
 .    ${UTIL}/bin/load_util_conf.sh
 .    ${UTIL}/bin/progress_bar.sh
+.    ${UTIL}/bin/display_logo.sh
 
 GEN_GTK_PRO_TOOL=gen_gtk_pro
-GEN_GTK_PRO_VERSION=ver.2.0
+GEN_GTK_PRO_VERSION=ver.3.0
 GEN_GTK_PRO_HOME=${UTIL_ROOT}/${GEN_GTK_PRO_TOOL}/${GEN_GTK_PRO_VERSION}
 GEN_GTK_PRO_CFG=${GEN_GTK_PRO_HOME}/conf/${GEN_GTK_PRO_TOOL}.cfg
 GEN_GTK_PRO_UTIL_CFG=${GEN_GTK_PRO_HOME}/conf/${GEN_GTK_PRO_TOOL}_util.cfg
 GEN_GTK_PRO_LOGO=${GEN_GTK_PRO_HOME}/conf/${GEN_GTK_PRO_TOOL}.logo
 GEN_GTK_PRO_LOG=${GEN_GTK_PRO_HOME}/log
-
-tabs 4
-CONSOLE_WIDTH=$(stty size | awk '{print $2}')
-
-.    ${GEN_GTK_PRO_HOME}/bin/center.sh
-.    ${GEN_GTK_PRO_HOME}/bin/display_logo.sh
 
 declare -A GEN_GTK_PRO_USAGE=(
     [USAGE_TOOL]="${GEN_GTK_PRO_TOOL}"
@@ -75,8 +70,8 @@ TOOL_NOTIFY="false"
 #
 function __gen_gtk_pro {
     local PN=$1
-    display_logo
     if [ -n "${PN}" ]; then
+        display_logo "vroncevic" "${GEN_GTK_PRO_TOOL}" "${GEN_GTK_PRO_VERSION}" "${GEN_GTK_PRO_LOGO}"
         local FUNC=${FUNCNAME[0]} MSG="None"
         local STATUS_CONF STATUS_CONF_UTIL STATUS
         MSG="Loading basic and util configuration!"
